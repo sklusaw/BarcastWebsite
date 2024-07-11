@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>The Barcast</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" >
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome.min.css">
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="assets/fonts/simple-line-icons.css">
+    <!-- Slicknav -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slicknav.css">
+    <!-- Menu CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/menu_sideslide.css">
+    <!-- Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slide-style.css">
+    <!-- Nivo Lightbox -->
+    <link rel="stylesheet" type="text/css" href="assets/css/nivo-lightbox.css" >
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+
+  </head>
+  <body>
+
+    <!-- Header Area wrapper Starts -->
+    <header id="header-wrap">
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+            </button>
+            <a href="index.html" class="navbar-brand"><img src="assets/img/logo.png" alt=""></a>
+          </div>
+          <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="onepage-nev navbar-nav mr-auto w-100 justify-content-end clearfix">
+              <li class="nav-item active">
+                <a class="nav-link" href="#hero-area">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">
+                  About
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#listen">
+                  Listen
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#who">
+                  Who?
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#join">
+                  Join
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">
+                  Contact
+                </a>
+              </li>
+			  <li class="nav-item">
+                <a class="nav-link" href="https://teespring.com/stores/barcast-merch">
+                  Merch
+                </a>
+              </li>
+			  <li class="nav-item">
+                <a class="nav-link" href="https://the-barcast.fandom.com/wiki/The_Barcast_Wiki">
+                  Wiki
+                </a>
+              </li>
+			  <li class="nav-item">
+                <a class="nav-link" href="https://www.patreon.com/The_Barcast">
+                  Patreon
+                </a>
+              </li>
+			  <li class="nav-item">
+                <a class="nav-link" href="https://www.reddit.com/r/MLPBarcast/">
+                  Reddit
+                </a>
+              </li>
+			  
+			  
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Start -->
+        <ul class="onepage-nev mobile-menu">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+		  <li>
+            <a href="#listen">Listen</a>
+          </li>
+          <li>
+            <a href="#who">Who?</a>
+          </li>
+          <li>
+            <a href="#join">Join</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+		  <li>
+            <a href="https://teespring.com/stores/barcast-merch">Merch</a>
+          </li>
+		  <li>
+            <a href="https://the-barcast.fandom.com/wiki/The_Barcast_Wiki">Wiki</a>
+          </li>
+		  <li>
+            <a href="https://www.patreon.com/The_Barcast">Patreon</a>
+          </li>
+		  <li>
+            <a href="https://www.reddit.com/r/MLPBarcast/">Reddit</a>
+          </li>
+        </ul>
+        <!-- Mobile Menu End -->
+      </nav>
+      <!-- Navbar End -->
+
+      <!-- Hero Area Start -->
+      <div id="hero-area" class="hero-area-bg">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 text-center">
+              <div class="contents">
+                <h5 class="script-font wow fadeInUp" data-wow-delay="0.3s">Hello! And welcome to...</h5>
+                <h2 class="head-title wow fadeInUp" data-wow-delay="0.6s">The Barcast</h2>
+                <p class="script-font wow fadeInUp" data-wow-delay="0.9s">Where the bar gets lower EVERY week!</p>
+                <ul class="social-icon wow fadeInUp" data-wow-delay="1.2s">
+                  <li>
+                    <a class="twitter" href="https://www.youtube.com/channel/UCQ3oGd0VGJCPLpCt2BOwbTg"><i class="icon-social-youtube"></i></a>
+                  </li>
+                  <li>
+                    <a class="twitter" href="https://twitter.com/fimbarcast"><i class="icon-social-twitter"></i></a>
+                  </li>
+				  <li>
+                    <a class="twitter" href="https://www.patreon.com/The_Barcast"><i class="icon-paypal" href="assets/img/patreon.png"></i></a>
+                  </li>
+                  <li>
+                    <a class="twitter" href="https://steamcommunity.com/groups/thebarcast"><i class="icon-social-steam"></i></a>
+                  </li>
+                  <li>
+                    <a class="twitter" href="http://www.soundcloud.com/user-526322316"><i class="icon-social-soundcloud"></i></a>
+                  </li>
+				  
+                 <!-- <li>
+                    <a class="google" href="#"><i class="icon-social-google"></i></a>
+                  </li>
+                </ul>
+                <div class="header-button wow fadeInUp" data-wow-delay="1s">
+                  <a href="#" class="btn btn-common">Get a Free Quote</a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Hero Area End -->
+    </header>
+    <!-- Header Area wrapper End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s">
+              <img class="img-fluid" src="assets/img/about/about-1.jpg" alt="">
+            </div>
+          </div> 
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="profile-wrapper wow fadeInRight" data-wow-delay="0.3s">
+              <h3>Welcome</h3>
+              
+				<p>
+				<h5>What's a Barcast?</h5>
+				<i>“You’re like the Howard Stern of ponies.” - Milk’s Mom</i><br/>
+<br/>
+				During The Barcast, which happens every Friday or Saturday, at 4PM PST, we will interview a prominent guest in the MLP community. We will ask them questions that you want to ask, and you can post any questions you want us to ask within the forum post designated for that date! In general, no question is too weird, obscene, or funny for us to ask. We also have a drinking word every podcast, and you can drink along with us at home! It's not called a Barcast for nothing!<br/>
+<br/>
+				<h5>Are ANY questions allowed?</h5>
+				Well, technically yes, but we won't always ask them. If you post a lot of questions (like 10 or more) we may just skip you. If you ask completely out of the blue questions, such as "do you like this certain anime character from absurd show, and who do you ship them with" we'll probably ignore you. If you ask about ages, politics, or really intrusive questions, we may skip you as well. We also ask that our guests give their preferences, and if they're uncomfortable, we'll skip your question.<br/>
+<br/>
+				<h5>Is it only the Barcast that happens here?</h5>
+				Not quite. We'll also do drunken readings of REALLY bad stories, do "Karaoke night at the bar," where YOU pick what we sing, and will likely do other small side projects as well. Stick around, there's rarely a dull moment with us.<br/>
+				Here are a few of our various shows we do (Some updated DAILY!):<br/>
+				<b>The Barcast:</b> We all interview big names in the fandom and ask them your questions!<br/>
+				<b>The Screaming Closet:</b> Flutterpriest and Anonpencil (and guests) play horror games. Much screaming.<br/>
+				<b>Shitfaced Shitfics:</b> Anonpencil and guests do fully voiced readings of REALLY bad stories. Drinking and crying are generally par for the course.<br/>
+<br/>
+				<h5>Can I be on the podcast?</h5>
+				We're not looking for new hosts, but if you want to be a guest, please feel free to ask! If you've contributed to the fandom in some major, important way, we'll likely be happy to have you on. Just be ready for some weird questions.</p>
+<!--<div class="about-profile">
+                <ul class="admin-profile">
+                  <li><span class="pro-title"> Name </span> <span class="pro-detail">Tom Saulnier</span></li>
+                  <li><span class="pro-title"> Age </span> <span class="pro-detail">25 Years</span></li>
+                  <li><span class="pro-title"> Experience </span> <span class="pro-detail">4 Years</span></li>
+                  <li><span class="pro-title"> Country </span> <span class="pro-detail">USA</span></li>
+                  <li><span class="pro-title"> Location </span> <span class="pro-detail">San Francisco, CA</span></li>
+                  <li><span class="pro-title"> e-mail </span> <span class="pro-detail">email@example.com</span></li>
+                  <li><span class="pro-title"> Phone </span> <span class="pro-detail">+ (00) 123 456 789</span></li>
+                  <li><span class="pro-title"> Freelance </span> <span class="pro-detail">Available</span></li>
+                </ul>
+              </div>
+              <a href="#" class="btn btn-common"><i class="icon-paper-clip"></i> Download Resume</a>
+              <a href="#" class="btn btn-danger"><i class="icon-speech"></i> Contact Me</a>
+            </div> -->
+          </div>   
+        </div>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<div class="slideshow-container">
+<br>
+<div class="mySlides"> <!--fade-->
+  <div class="numbertext">1 / 3</div>
+  <img src="assets/img/Community/bronycon2019.jpg" style="width:100%">
+  <div class="text">Barcast Meetup - Bronycon 2019</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="assets/img/Community/Memes.jpg" style="width:100%">
+  <div class="text">We're a Very Serious Bunch</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="assets/img/Community/babscon2019.jpg" style="width:100%">
+  <div class="text">Babscon 2019 - The Barcast Panel</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+      </div>
+	  
+    </section>
+    <!-- About Section End -->
+
+    <!-- Services Section Start -->
+    <section id="listen" class="services section-padding">
+      <h2 class="section-title wow flipInX" data-wow-delay="0.4s">Where Can I Listen?</h2>
+      <div class="container">
+        <div class="row">
+          <!-- Services item -->
+		  
+		   <div class="col-md-6 col-lg-3 col-xs-12">
+            <div class="services-item wow fadeInDown" data-wow-delay="0.3s">
+              <div class="icon">
+                <i class="icon-bubbles"></i>
+              </div>
+              <div class="services-content">
+                <h3><a href="https://www.youtube.com/channel/UCQ3oGd0VGJCPLpCt2BOwbTg">Youtube</a></h3>
+                <!--<p>Check it out here!</p>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 col-xs-12">
+            <div class="services-item wow fadeInDown" data-wow-delay="0.6s">
+              <div class="icon">
+                <i class="icon-bubbles"></i>
+              </div>
+              <div class="services-content">
+                <h3><a href="https://itunes.apple.com/us/podcast/the-good-hie-podcast/id1228476998">iTunes</a></h3>
+                <!--<p>Check it out here!</p>-->
+              </div>
+            </div>
+          </div>
+          <!-- Services item -->
+          <div class="col-md-6 col-lg-3 col-xs-12">
+            <div class="services-item wow fadeInDown" data-wow-delay="0.9s">
+              <div class="icon">
+                <i class="icon-bubbles"></i>
+              </div>
+              <div class="services-content">
+                <h3><a href="https://play.google.com/music/listen?u=0#/ps/I3ody4gbza25qgkipcgnanf66qy">Google Play</a></h3>
+                <!--<p>Check it out here!</p>-->
+              </div>
+            </div>
+          </div>
+          <!-- Services item -->
+          <div class="col-md-6 col-lg-3 col-xs-12">
+            <div class="services-item wow fadeInDown" data-wow-delay="1.2s">
+              <div class="icon">
+                <i class="icon-bubbles"></i>
+              </div>
+              <div class="services-content">
+                <h3><a href="http://www.soundcloud.com/user-526322316">Soundcloud</a></h3>
+                <!--<p>Check it out here!</p>-->
+              </div>
+            </div>
+          </div><br/>
+		  <div class="col-md-6 col-lg-3 col-xs-12">
+            <div class="services-item wow fadeInDown" data-wow-delay="1.5s">
+              <div class="icon">
+                <i class="icon-bubbles"></i>
+              </div>
+              <div class="services-content">
+                <h3><a href="http://ponyvillelive.com/show/view/id/87">Ponyville Live</a></h3>
+                <!--<p>Check it out here!</p>-->
+              </div>
+            </div>
+          </div>
+          <!-- Services item -->
+          <div class="col-md-6 col-lg-3 col-xs-12">
+            <div class="services-item wow fadeInDown" data-wow-delay="1.8s">
+              <div class="icon">
+                <i class="icon-bubbles"></i>
+              </div>
+              <div class="services-content">
+                <h3><a href="http://feeds.soundcloud.com/users/soundcloud:users:363716420/sounds.rss">RSS Feed</a></h3>
+                <!--<p>Check it out here!</p>-->
+              </div>
+            </div>
+          </div>
+        
+		<div class="col-md-6 col-lg-3 col-xs-12">
+            <div class="services-item wow fadeInDown" data-wow-delay="2.1s">
+              <div class="icon">
+                <i class="icon-bubbles"></i>
+              </div>
+              <div class="services-content">
+                <h3><a href="http://twitch.tv/mikesnipe">Cast on Twitch</a></h3>
+                <!--<p>Check it out here!</p>-->
+              </div>
+            </div>
+          </div>
+        <div class="col-md-6 col-lg-3 col-xs-12">
+            <div class="services-item wow fadeInDown" data-wow-delay="2.4s">
+              <div class="icon">
+                <i class="icon-bubbles"></i>
+              </div>
+              <div class="services-content">
+                <h3><a href="http://twitch.tv/flutterpriest">Gaming on Twitch</a></h3>
+                <!--<p>Check it out here!</p>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	  </div>
+    </section>
+    <!-- Services Section End -->
+
+    <!-- Resume Section Start -->
+    <div id="who" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="wow fadeInRight" data-wow-delay="0.3s">
+              <ul class="timeline">
+                <li>
+                  <i class="icon-graduation"></i>
+                  <h2 class="timelin-title">Who Is The Barcast?</h2>
+                </li>
+                <li>
+                  <div class="content-text">
+                    <h3 class="line-title"><a href="https://www.fimfiction.net/user/177150/Flutterpriest">Flutterpriest</a></h3>
+                    <span><i>The Voice</i></span>
+                    <p class="line-text">Priest is the one to usually ask the questions in our podcasts. He's best known as being one of the top 100 writers on FimFiction, being sweet and cuddly, and being one of the honestly most decent people on the podcast. He's a drummer and likes Princess Cadance, Fluttershy, as well as his OC Lyler, the mentally deficient horse who fucks cactuses. He's also a fan of Chik Tendies, scotch, pot roast, and metal music. On the Barcast, you're likely to hear him making squealing noises from his closet, apologizing, and trying to keep everyone vaguely on topic.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="content-text">
+                    <h3 class="line-title"><a href="https://www.fimfiction.net/user/111082/mikesnipe">Mikesnipe</a></h3>
+                    <span><i>The Quiet One</i></span>
+                    <p class="line-text">You might not always hear Milk on the podcast, but be assured, he's there. Milk began the podcast, and has helped the Barcast grow into what it is today, out of almost nothing. He rarely writes, but he's capable of jotting down pure hilarity and is a constant reader of both good and terrible fanfiction. You should know, pretty much everything is his fetish. Everything, we're serious. At this point, everyone is pretty sure that he regrets ever starting this shit, but he loves us too much to tell us to fuck off. We're not complaining.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="content-text">
+                    <h3 class="line-title"><a href="https://www.fimfiction.net/user/83058/Flammenwerfer">Flammenwerfer</a></h3>
+                    <span><i>The Suave One</i></span>
+                    <p class="line-text">Flam is easily the most normal-seeming person on this podcast. He looks like he could have easily been a member of the Backstreet Boys, has a smooth, sultry voice, but if you make him laugh too hard he may actually become unable to breathe and die. He's been known for writing stories that contain haunting realism from WWI and WWII, and known for his OC Stella, who would kill all of us if she so chose. Prepare to hear his Palpatine voice regularly, as well as random phrases in German.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class=" wow fadeInRight" data-wow-delay="0.6s">
+              <ul class="timeline">
+                <li>
+                  <i class="icon-briefcase"></i>
+                  <h2 class="timelin-title">And Why Are There Six?</h2>
+                </li>
+                <li>
+                  <div class="content-text">
+                    <h3 class="line-title"><a href="https://www.fimfiction.net/user/204785/anonpencil">Anonpencil</a></h3>
+                    <span><i>The Loud One</i></span>
+                    <p class="line-text">Prepare for abuse. Pretty much every sentence out of this mouth contains a swear word or two, and the verbal abuse she spews can be as soul-crushing as it is vulgar. Switching constantly between sweet and cuddly, to murderous and bitter, Pencil is the only girl on this podcast, and she certainly ain't no lady. Knowledgable on most sexual topics, and not afraid to speak about taboo subjects, pencil will be known to break out into songs, insult guests, and make Enigma feel like the lowest piece of shit that ever walked the earth.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="content-text">
+                    <h3 class="line-title"><a href="https://www.fimfiction.net/user/229939/Ravvij">Ravvij</a></h3>
+                    <span><i>The Prankster</i></span>
+                    <p class="line-text">Rav (Ravioli) is best known for doing some amazing art, writing some damn decent stories, and for his laughter at others' suffering on the podcast. Though not on every Barcast, Rav is happy to contribute tales of messing with others, and offer his giggles as our guests become more and more uncomfortable. As an avid gamer, he likes to pass the time by streaming his game sessions, and is down to post a weird meme any time the situation calls for it (which is always). He also has a vaguely punk style, all meant to cover the fact that he's a big silly softie.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="content-text">
+                    <h3 class="line-title"><a href="https://www.fimfiction.net/user/184988/Enigmatic+Otaku">Enigmatic Otaku</a></h3>
+                    <span><i>The Punching Bag</i></span>
+                    <p class="line-text">Poor Enigma just can't catch a break. If someone is saying "fuck you" on the podcast, they're probably going to be saying to him. He's brown, small, hairy, and would be lovable if he wasn't so shit. An avid lover of dragon tits, Enigma is best known for "that one Ember story," and can be seen shilling his work at every opportunity. In the end, Enigma is easily the cheeriest of the podcast, besides the constant abuse, and is probably the most likely to make sad sounds as we slowly destroy his self esteem, one insult at a time.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Resume Section End -->
+
+    <!-- Portfolio Section -->
+    <section id="join" class="section-padding">
+      <!-- Container Starts -->
+      <div class="container">        
+        <h2 class="section-title wow flipInX" data-wow-delay="0.4s">Come Hang Out With Us!</h2>
+        <div class="row">          
+          <div class="col-md-12">
+            <!-- Portfolio Controller/Buttons -->
+          <!--  <div class="controls text-center">
+              <a class="filter active btn btn-common" data-filter="all">
+                All 
+              </a>
+              <a class="filter btn btn-common" data-filter=".design">
+                Design 
+              </a>
+              <a class="filter btn btn-common" data-filter=".development">
+                Development
+              </a>
+              <a class="filter btn btn-common" data-filter=".print">
+                Print 
+              </a>
+            </div> --?
+            <!-- Portfolio Controller/Buttons Ends-->
+          </div>
+
+          <!-- Portfolio Recent Projects -->
+          <div id="portfolio" class="row wow fadeInDown" data-wow-delay="0.4s">
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development print">
+              <div class="portfolio-item">
+                <div class="shot-item">
+                  <img src="assets/img/gallery/img-1.jpg" alt="" />  
+                  <div class="overlay">
+                    <div class="icons">
+                      <!--<a class="lightbox preview" href="assets/img/gallery/img-1.jpg">
+                        <i class="icon-eye"></i>
+                      </a>-->
+                      <a class="link" href="https://www.fimfiction.net/group/212308/the-barcast">
+                        <i class="icon-link"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>               
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix design print">
+              <div class="portfolio-item">
+                <div class="shot-item">
+                  <img src="assets/img/gallery/img-2.jpg" alt=""/> 
+                  <div class="overlay">
+                    <div class="icons">
+                      <!--<a class="lightbox preview" href="assets/img/gallery/img-2.jpg">
+                        <i class="icon-eye"></i>
+                      </a>-->
+                      <a class="link" href="https://discord.gg/Kxb4A7W">
+                        <i class="icon-link"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>               
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development">
+              <div class="portfolio-item">
+                <div class="shot-item">
+                  <img src="assets/img/gallery/img-3.jpg" alt=""/> 
+                  <div class="overlay">
+                    <div class="icons">
+                     <!-- <a class="lightbox preview" href="assets/img/gallery/img-3.jpg">
+                        <i class="icon-eye"></i>
+                      </a>-->
+                      <a class="link" href="https://steamcommunity.com/groups/thebarcast">
+                        <i class="icon-link"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>               
+              </div>
+            </div>
+			
+			<!--
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development design">
+              <div class="portfolio-item">
+                <div class="shot-item">
+                  <img src="assets/img/gallery/img-4.jpg" alt="" /> 
+                  <div class="overlay">
+                    <div class="icons">
+                      <a class="lightbox preview" href="assets/img/gallery/img-4.jpg">
+                        <i class="icon-eye"></i>
+                      </a>
+                      <a class="link" href="#">
+                        <i class="icon-link"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>               
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development">
+              <div class="portfolio-item">
+                <div class="shot-item">
+                  <img src="assets/img/gallery/img-5.jpg" alt="" /> 
+                  <div class="overlay">
+                    <div class="icons">
+                      <a class="lightbox preview" href="assets/img/gallery/img-5.jpg">
+                        <i class="icon-eye"></i>
+                      </a>
+                      <a class="link" href="#">
+                        <i class="icon-link"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>               
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix print design">
+              <div class="portfolio-item">
+                <div class="shot-item">
+                  <img src="assets/img/gallery/img-6.jpg" alt=""/>
+                  <div class="overlay">
+                    <div class="icons">
+                       <a class="lightbox preview" href="assets/img/gallery/img-6.jpg">
+                        <i class="icon-eye"></i>
+                      </a> 
+                      <a class="link" href="#">
+                        <i class="icon-link"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>               
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- Container Ends -->
+    </section>
+    <!-- Portfolio Section Ends --> 
+
+    <!-- Counter Area Start-->
+    <!--<section class="counter-section section-padding">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-md-3 col-sm-6 work-counter-widget text-center">
+            <div class="counter wow fadeInDown" data-wow-delay="0.3s">
+              <div class="icon"><i class="icon-briefcase"></i></div>
+              <div class="counterUp">250</div>
+              <p>Project Working</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-6 work-counter-widget text-center">
+            <div class="counter wow fadeInDown" data-wow-delay="0.6s">
+              <div class="icon"><i class="icon-check"></i></div>
+              <div class="counterUp">950</div>
+              <p>Project Done</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-6 work-counter-widget text-center">
+            <div class="counter wow fadeInDown" data-wow-delay="0.9s">
+              <div class="icon"><i class="icon-diamond"></i></div>
+              <div class="counterUp">150</div>
+              <p>Awards Received</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-6 work-counter-widget text-center">
+            <div class="counter wow fadeInDown" data-wow-delay="1.2s">
+              <div class="icon"><i class="icon-heart"></i></div>
+              <div class="counterUp">299</div>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- Counter Area End-->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="section-padding">      
+      <div class="contact-form">
+        <div class="container">
+          <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.4s">          
+             <div class="col-md-6 col-lg-6 col-sm-12">
+             <!-- <div class="contact-block">
+                <h2>Contact Form</h2>
+                <form id="contactForm">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Name" required data-error="Please enter your name">
+                        <div class="help-block with-errors"></div>
+                      </div>                                 
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" placeholder="Email" id="email" class="form-control" name="email" required data-error="Please enter your email">
+                        <div class="help-block with-errors"></div>
+                      </div> 
+                    </div>
+                     <div class="col-md-12">
+                      <div class="form-group">
+                        <input type="text" placeholder="Subject" id="msg_subject" class="form-control" required data-error="Please enter your subject">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group"> 
+                        <textarea class="form-control" id="message" placeholder="Your Message" rows="5" data-error="Write your message" required></textarea>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <div class="submit-button">
+                        <button class="btn btn-common" id="submit" type="submit">Send Message</button>
+                        <div id="msgSubmit" class="h3 text-center hidden"></div> 
+                        <div class="clearfix"></div> 
+                      </div>
+                    </div>
+                  </div>            
+                </form>
+              </div> -->
+			  <div class="footer-right-area wow fadeIn">
+                <h2>Contact Address</h2>
+                <div class="footer-right-contact">
+			  <div class="single-contact">
+                    <div class="contact-icon">
+                      <i class="fa fa-envelope"></i>
+                    </div>
+                    <p><a href="mailto:mlpbarcast@gmail.com">mlpbarcast@gmail.com</a></p>
+              </div>
+            </div> 
+			</div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12">
+              
+                  <!-- <div class="single-contact">
+                    <div class="contact-icon">
+                      <i class="fa fa-map-marker"></i>
+                    </div>
+                    <p>San Francisco, CA</p>
+                  </div> -->
+                  <a href="http://ponyvillelive.com/">
+				  <img src="assets/img/pvl.png" width=400/>
+				  </a>
+               <!--   <div class="single-contact">
+                    <div class="contact-icon">
+                      <i class="fa fa-phone"></i>
+                    </div>
+                    <p><a href="#">+ (00) 123 456 789</a></p>
+                    <p><a href="#">+ (00) 123 344 789</a></p>
+                  </div>
+                </div> -->
+              
+         <!--   <div class="col-md-12">
+            <object style="border:0; height: 450px; width: 100%;" data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34015.943594576835!2d-106.43242624069771!3d31.677719472407432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75d90e99d597b%3A0x6cd3eb9a9fcd23f1!2sCourtyard+by+Marriott+Ciudad+Juarez!5e0!3m2!1sen!2sbd!4v1533791187584"></object>
+            </div> -->
+          </div>
+        </div>
+      </div>   
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Section Start -->
+    <footer class="footer-area section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer-text text-center wow fadeInDown" data-wow-delay="0.3s">
+              <ul class="social-icon">
+                  <li>
+                    <a class="twitter" href="https://www.youtube.com/channel/UCQ3oGd0VGJCPLpCt2BOwbTg"><i class="icon-social-youtube"></i></a>
+                  </li>
+                  <li>
+                    <a class="twitter" href="https://twitter.com/fimbarcast"><i class="icon-social-twitter"></i></a>
+                  </li>
+				  <li>
+                    <a class="twitter" href="https://www.patreon.com/The_Barcast"><i class="icon-paypal" href="assets/img/patreon.png"></i></a>
+                  </li>
+                  <li>
+                    <a class="twitter" href="https://steamcommunity.com/groups/thebarcast"><i class="icon-social-steam"></i></a>
+                  </li>
+                  <li>
+                    <a class="twitter" href="http://www.soundcloud.com/user-526322316"><i class="icon-social-soundcloud"></i></a>
+                  </li>
+              </ul>
+              <p>Copyright © 2018 UIdeck All Right Reserved</p>
+			  <p><a href="https://s3-us-west-2.amazonaws.com/thebarcast.net/assets/pony.jar">Cadance Is Best Pony</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Go to Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="icon-arrow-up"></i>
+    </a>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery-min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.mixitup.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/jquery.nav.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>  
+    <script src="assets/js/nivo-lightbox.js"></script>
+    <script src="assets/js/jquery.slicknav.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/form-validator.min.js"></script>
+    <script src="assets/js/contact-form-script.min.js"></script>
+    <script src="assets/js/map.js"></script>
+      
+  </body>
+</html>
